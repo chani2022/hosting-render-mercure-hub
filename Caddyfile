@@ -6,8 +6,8 @@
     log
 
     mercure {
-        publisher_jwt "{$PUBLISHER_JWT}"
-        subscriber_jwt "{$SUBSCRIBER_JWT}"
+        publisher_jwt "default-publisher-key-12345-change-me"
+        subscriber_jwt "default-subscriber-key-67890-change-me"
         publish_origins *
         cors_origins *
         anonymous
