@@ -1,9 +1,7 @@
-FROM caddy:2.8.0-builder AS builder
+FROM dunglas/mercure:v0.21
 
-RUN xcaddy build \
-    --with github.com/dunglas/mercure@latest \
-    --with github.com/dunglas/mercure/caddy@latest
-
-FROM caddy:2.8.0
-COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 COPY Caddyfile /etc/caddy/Caddyfile
+
+EXPOSE 80
+
+CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile"]
