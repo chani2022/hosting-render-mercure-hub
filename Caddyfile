@@ -3,7 +3,7 @@
 }
 
 # Configuration HTTPS sécurisée
-https://new-hosting-mercure2.onrender.com {
+https://hosting-render-mercure-hub.onrender.com {
 	tls internal
 
 	# Headers de sécurité
@@ -25,6 +25,6 @@ https://new-hosting-mercure2.onrender.com {
 }
 
 # Redirection HTTP vers HTTPS
-http://new-hosting-mercure2.onrender.com {
-	redir https://new-hosting-mercure2.onrender.com{uri} permanent
+http://hosting-render-mercure-hub.onrender.com {
+	redir https://hosting-render-mercure-hub.onrender.com{uri} permanent
 }
