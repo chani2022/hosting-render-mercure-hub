@@ -1,19 +1,11 @@
-{
-    auto_https off
-}
+:80
 
-:80 {
-    log
-
+route {
     mercure {
-        publisher_jwt "default-publisher-key-12345-change-me"
-        subscriber_jwt "default-subscriber-key-67890-change-me"
-        publish_origins *
-        cors_origins *
+        publisher_jwt "your-publisher-key-123456789"
+        subscriber_jwt "your-subscriber-key-987654321"
         anonymous
-    }
-
-    route {
-        mercure
+        cors_origins *
+        transport_url bolt:///tmp/mercure.db
     }
 }
