@@ -1,11 +1,17 @@
-:80
+{
+    auto_https off
+}
 
-route {
-    mercure {
-        publisher_jwt "your-publisher-key-123456789"
-        subscriber_jwt "your-subscriber-key-987654321"
-        anonymous
-        cors_origins *
-        transport_url bolt:///tmp/mercure.db
+:443 {
+    tls internal
+
+    route {
+        mercure {
+            publisher_jwt "your-publisher-key-123456789"
+            subscriber_jwt "your-subscriber-key-987654321"
+            anonymous
+            cors_origins *
+            transport_url bolt:///tmp/mercure.db
+        }
     }
 }
