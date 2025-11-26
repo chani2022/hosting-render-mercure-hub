@@ -6,8 +6,8 @@
     log
 
     mercure {
-        publisher_jwt {$PUBLISHER_JWT}
-        subscriber_jwt {$SUBSCRIBER_JWT}
+        publisher_jwt "{$PUBLISHER_JWT}"
+        subscriber_jwt "{$SUBSCRIBER_JWT}"
         publish_origins *
         cors_origins *
         anonymous
