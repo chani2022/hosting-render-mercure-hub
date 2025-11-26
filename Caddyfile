@@ -6,8 +6,8 @@
     log
 
     mercure {
-        publisher_jwt "{$PUBLISHER_JWT}"
-        subscriber_jwt "{$SUBSCRIBER_JWT}"
+        publisher_jwt eyJhbGciOiJIUzI1NiJ9.eyJtZXJjdXJlIjpbInB1Ymxpc2giXX0.JRwbahFsVrZtO2WnvpXWMT8meivDtT_C85w6rIkZis0
+        subscriber_jwt eyJhbGciOiJIUzI1NiJ9.eyJtZXJjdXJlIjpbInN1YnNjcmliZSJdXQ.su1JzTKzVOy0e8NJzGGQa2BWzAmcxLsgP_O50SJ2kW4
         publish_origins *
         cors_origins *
         anonymous
