@@ -4,7 +4,7 @@
 # Configuration principale avec le hostname de Render
 hosting-render-mercure-hub.onrender.com {
 	# Render gère déjà le TLS en frontal
-	tls internal
+	# tls internal
 
 	# Headers de sécurité
 	header {
@@ -16,8 +16,8 @@ hosting-render-mercure-hub.onrender.com {
 	# Route Mercure
 	route {
 		mercure {
-			publisher_jwt "test-publisher-key-123"
-			subscriber_jwt "test-subscriber-key-456"
+			publisher_jwt "4r57PpIdyj100hiVxCyCzIBPsW/D8tCGnSKK62xtsow="
+			subscriber_jwt "4r57PpIdyj100hiVxCyCzIBPsW/D8tCGnSKK62xtsow="
 			anonymous
 			cors_origins *
 			transport_url bolt:///tmp/mercure.db
