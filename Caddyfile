@@ -1,7 +1,6 @@
 {
 	auto_https off
 }
-
 # Configuration principale avec le hostname de Render
 hosting-render-mercure-hub.onrender.com {
 	# Render gère déjà le TLS en frontal
