@@ -2,8 +2,9 @@
 	auto_https off
 }
 
-# Configuration HTTPS sécurisée
-https://new-hosting-mercure2.onrender.com {
+# Configuration principale avec le hostname de Render
+hosting-render-mercure-hub.onrender.com {
+	# Render gère déjà le TLS en frontal
 	tls internal
 
 	# Headers de sécurité
@@ -13,6 +14,7 @@ https://new-hosting-mercure2.onrender.com {
 		X-Frame-Options "DENY"
 	}
 
+	# Route Mercure
 	route {
 		mercure {
 			publisher_jwt "test-publisher-key-123"
@@ -22,9 +24,4 @@ https://new-hosting-mercure2.onrender.com {
 			transport_url bolt:///tmp/mercure.db
 		}
 	}
-}
-
-# Redirection HTTP vers HTTPS
-http://new-hosting-mercure2.onrender.com {
-	redir https://new-hosting-mercure2.onrender.com{uri} permanent
 }
