@@ -6,7 +6,6 @@
     log
 
     mercure {
-        # URLs publiques
         publisher_jwt $PUBLISHER_JWT
         subscriber_jwt $SUBSCRIBER_JWT
         publish_origins *
@@ -15,7 +14,6 @@
     }
 
     route {
-        # L’endpoint Mercure
         mercure
     }
 }
