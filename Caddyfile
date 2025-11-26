@@ -1,0 +1,21 @@
+{
+    auto_https off
+}
+
+:80 {
+    log
+
+    mercure {
+        # URLs publiques
+        publisher_jwt $PUBLISHER_JWT
+        subscriber_jwt $SUBSCRIBER_JWT
+        publish_origins *
+        cors_origins *
+        anonymous
+    }
+
+    route {
+        # L’endpoint Mercure
+        mercure
+    }
+}
